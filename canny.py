@@ -25,7 +25,6 @@ def gradient_calculation(input_image):
 
     gradient_direction = np.rad2deg(np.arctan2(gradient_y, gradient_x))
     gradient_direction= gradient_direction.astype('uint8')
-    cv2.imshow('direction', gradient_direction)
 
     return gradient_magnitude, gradient_direction
 
@@ -83,8 +82,6 @@ if __name__ == "__main__":
     blurred_image = cv2.filter2D(img, -1, gauss_kernel)
     magnitude, direction = gradient_calculation(blurred_image)
     edge_map = non_maximum_suppression(magnitude, direction)
-    low_threshold = [0.05, 0.10, 0.15, 0.20, 0.25]
-    high_threshold = [0.35, 0.40, 0.45, 0.50, 0.55]
     result = double_threshold_and_edge_tracking(edge_map, low_threshold=0, high_threshold=70)
     canny_algorithm = cv2.Canny(img,100,200)
 
