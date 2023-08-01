@@ -12,4 +12,5 @@ Applying the double threshold
 
 Tracking edges
 
-Code that accompanies the following article:
+Code that accompanies the following article: 
+[Canny Edge Detection](https://thedukh.com/2023/08/the-opencv-journey-part-ii-canny-edge-detection/)
