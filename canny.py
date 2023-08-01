@@ -87,6 +87,7 @@ if __name__ == "__main__":
 
     cv2.imshow("Image", img)
     cv2.imshow("Blurred Image", blurred_image)
+    cv2.imshow('Magnitude', magnitude)
     cv2.imshow('Edge Map', edge_map)
     cv2.imshow('Result', result)
     cv2.imshow('Canny', canny_algorithm)
